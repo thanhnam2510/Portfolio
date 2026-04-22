@@ -98,7 +98,7 @@ const Contact = () => {
         </svg>
       ),
       label: t('contact.labels.address'),
-      value: '115/11, đường 11, khu phố 34, phường Thủ Đức, Thành phố Hồ Chí Minh',
+      value: 'phường Thủ Đức, Thành phố Hồ Chí Minh',
       link: '#'
     },
     {
