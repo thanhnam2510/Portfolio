@@ -41,6 +41,20 @@
   },
   "experience": {
     "title": "Kinh nghiệm làm việc",
+    "amaris": {
+      "position": "Software Engineer",
+      "company": "Amaris Consulting",
+      "location": "TP. Hồ Chí Minh, Việt Nam",
+      "period": "Tháng 5/2026 - Hiện tại",
+      "duration": "1 tháng",
+      "type": "On-site",
+      "employmentType": "Full-time",
+      "descriptions": {
+        "desc1": "Tham gia phát triển và bảo trì các hệ thống phần mềm phục vụ dự án cho công ty Bosch tại khu vực Long Thành",
+        "desc2": "Phối hợp với các team liên quan để phân tích yêu cầu, triển khai tính năng và đảm bảo tiến độ bàn giao",
+        "desc3": "Tối ưu chất lượng code, hỗ trợ xử lý lỗi và cải thiện hiệu năng hệ thống trong môi trường production"
+      }
+    },
     "aegona": {
       "position": "Software Engineer",
       "company": "Software Development Aegona Ltd",
@@ -102,7 +116,7 @@
       "demoUrl": "",
       "repoUrl": "",
       "linksNote": "Demo và repo có thể cung cấp khi được yêu cầu.",
-      "period": "2023 - Hiện tại"
+      "period": "03/2023 - 11/2025"
     },
     "plant": {
       "title": "Plant Management Website",
@@ -115,7 +129,7 @@
       "demoUrl": "",
       "repoUrl": "",
       "linksNote": "Demo và repo có thể cung cấp khi được yêu cầu.",
-      "period": "3/2024 - 7/2024 | 5/2025 - Hiện tại"
+      "period": "3/2024 - 7/2024 | 5/2025 - 7/2025"
     },
     "sale": {
       "title": "Sale Miniapp",

@@ -119,8 +119,8 @@ const Contact = () => {
         <SectionTitle>{t('contact.title')}</SectionTitle>
         <div className="contact-content">
           <div className="contact-info">
-            <h3>{t('contact.subtitle')}</h3>
-            <p>{t('contact.description')}</p>
+            {/* <h3>{t('contact.subtitle')}</h3>
+            <p>{t('contact.description')}</p> */}
             <p className="contact-note">{t('contact.note')}</p>
             <div className="contact-details">
               {contactInfo.map((info, index) => (

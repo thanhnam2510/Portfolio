@@ -41,6 +41,20 @@
   },
   "experience": {
     "title": "Work Experience",
+    "amaris": {
+      "position": "Software Engineer",
+      "company": "Amaris Consulting",
+      "location": "TP. Hồ Chí Minh, Việt Nam",
+      "period": "May 2026 - Present",
+      "duration": "1 mo",
+      "type": "On-site",
+      "employmentType": "Full-time",
+      "descriptions": {
+        "desc1": "Contribute to developing and maintaining software systems for Bosch company projects in the Long Thanh area",
+        "desc2": "Collaborate with cross-functional teams to clarify requirements, deliver features, and keep project timelines on track",
+        "desc3": "Improve code quality, support issue resolution, and optimize system performance in production environments"
+      }
+    },
     "aegona": {
       "position": "Software Engineer",
       "company": "Software Development Aegona Ltd",
@@ -102,7 +116,7 @@
       "demoUrl": "",
       "repoUrl": "",
       "linksNote": "Demo and repo are available upon request.",
-      "period": "2023 - 2025"
+      "period": "03/2023 - 11/2025"
     },
     "plant": {
       "title": "Plant Management Website",
@@ -115,7 +129,7 @@
       "demoUrl": "",
       "repoUrl": "",
       "linksNote": "Demo and repo are available upon request.",
-      "period": "3/2024 - 7/2024 | 5/2025 - 7/2025"
+      "period": "03/2024 - 07/2024 | 05/2025 - 07/2025"
     },
     "sale": {
       "title": "Sale Miniapp",

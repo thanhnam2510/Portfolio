@@ -8,6 +8,20 @@ const Experience = () => {
 
   const experiences = [
     {
+      position: t('experience.amaris.position'),
+      company: t('experience.amaris.company'),
+      location: t('experience.amaris.location'),
+      period: t('experience.amaris.period'),
+      duration: t('experience.amaris.duration'),
+      type: t('experience.amaris.type'),
+      employmentType: t('experience.amaris.employmentType'),
+      description: [
+        t('experience.amaris.descriptions.desc1'),
+        t('experience.amaris.descriptions.desc2'),
+        t('experience.amaris.descriptions.desc3')
+      ]
+    },
+    {
       position: t('experience.sevago.position'),
       company: t('experience.sevago.company'),
       location: t('experience.sevago.location'),
