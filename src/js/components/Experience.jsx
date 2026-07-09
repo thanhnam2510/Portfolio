@@ -1,10 +1,11 @@
 import { useLanguage } from '../shared/useLanguage'
 import SectionTitle from '../shared/SectionTitle'
 import Card from '../shared/Card'
+import { formatDuration } from '../shared/formatDuration'
 import '../../styles/components/Experience.scss'
 
 const Experience = () => {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   const experiences = [
     {
@@ -12,7 +13,8 @@ const Experience = () => {
       company: t('experience.amaris.company'),
       location: t('experience.amaris.location'),
       period: t('experience.amaris.period'),
-      duration: t('experience.amaris.duration'),
+      startDate: '2026-05-01',
+      endDate: null,
       type: t('experience.amaris.type'),
       employmentType: t('experience.amaris.employmentType'),
       description: [
@@ -26,7 +28,8 @@ const Experience = () => {
       company: t('experience.sevago.company'),
       location: t('experience.sevago.location'),
       period: t('experience.sevago.period'),
-      duration: t('experience.sevago.duration'),
+      startDate: '2025-11-01',
+      endDate: '2026-05-31',
       type: t('experience.sevago.type'),
       employmentType: t('experience.sevago.employmentType'),
       description: [
@@ -40,7 +43,8 @@ const Experience = () => {
       company: t('experience.aegona.company'),
       location: t('experience.aegona.location'),
       period: t('experience.aegona.period'),
-      duration: t('experience.aegona.duration'),
+      startDate: '2023-03-01',
+      endDate: '2025-11-30',
       type: t('experience.aegona.type'),
       description: [
         t('experience.aegona.descriptions.desc1'),
@@ -57,7 +61,10 @@ const Experience = () => {
       <div className="container">
         <SectionTitle>{t('experience.title')}</SectionTitle>
         <div className="timeline">
-          {experiences.map((exp, index) => (
+          {experiences.map((exp, index) => {
+            const duration = formatDuration(exp.startDate, exp.endDate, language)
+
+            return (
             <div key={index} className="timeline-item">
               <div className="timeline-marker"></div>
               <Card className="timeline-content">
@@ -66,7 +73,7 @@ const Experience = () => {
                 {exp.location && <p className="timeline-location">{exp.location}</p>}
                 <div className="timeline-meta">
                   <span className="timeline-period">{exp.period}</span>
-                  {exp.duration && <span className="timeline-duration">{exp.duration}</span>}
+                  {duration && <span className="timeline-duration">{duration}</span>}
                   {exp.type && <span className="timeline-type">{exp.type}</span>}
                   {exp.employmentType && <span className="timeline-employment-type">{exp.employmentType}</span>}
                 </div>
@@ -77,7 +84,8 @@ const Experience = () => {
                 </ul>
               </Card>
             </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

@@ -19,12 +19,12 @@ import {
   SiGit,
   SiTypescript,
   SiNextdotjs,
-  SiGooglecloud
+  SiGooglecloud,
+  SiRabbitmq
 } from 'react-icons/si'
 import { 
   FaServer,
   FaCloud,
-  FaDatabase,
   FaBrain
 } from 'react-icons/fa'
 import '../../styles/components/Skills.scss'
@@ -66,11 +66,14 @@ const Skills = () => {
       title: t('skills.categories.devops'),
       icon: '🚀',
       skills: [
+        { name: 'Azure', icon: FaCloud, color: '#0078D4' },
         { name: 'Docker', icon: SiDocker, color: '#2496ED' },
+        { name: 'Postman', icon: SiPostman, color: '#FF6C37' },
+        { name: 'RabbitMQ', icon: SiRabbitmq, color: '#FF6600' },
+        { name: 'Git', icon: SiGit, color: '#F05032' },
         { name: 'VPS', icon: FaServer, color: '#2496ED' },
         { name: 'Server Management', icon: FaServer, color: '#CC2927' },
         { name: 'Hosting', icon: FaCloud, color: '#0066CC' },
-        { name: 'Git', icon: SiGit, color: '#F05032' },
       ]
     },
     {

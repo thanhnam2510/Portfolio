@@ -44,15 +44,14 @@
     "amaris": {
       "position": "Software Engineer",
       "company": "Amaris Consulting",
-      "location": "TP. Hồ Chí Minh, Việt Nam",
+      "location": "Ho Chi Minh City, Vietnam",
       "period": "May 2026 - Present",
-      "duration": "1 mo",
       "type": "On-site",
       "employmentType": "Full-time",
       "descriptions": {
-        "desc1": "Contribute to developing and maintaining software systems for Bosch company projects in the Long Thanh area",
-        "desc2": "Collaborate with cross-functional teams to clarify requirements, deliver features, and keep project timelines on track",
-        "desc3": "Improve code quality, support issue resolution, and optimize system performance in production environments"
+        "desc1": "Develop an employee skills training course management web app (MFOTT Elearning): role-based access, course assignment, employee evaluation, and reporting",
+        "desc2": "Build with a microservice and DDD architecture using .NET Core 3 backend and Angular 8 frontend; integrate email notifications, RabbitMQ, and stored procedure calls",
+        "desc3": "Collaborate with the team on requirements, feature delivery, and code quality in production environments"
       }
     },
     "aegona": {
@@ -60,7 +59,6 @@
       "company": "Software Development Aegona Ltd",
       "location": "District 12, Ho Chi Minh City, Vietnam",
       "period": "March 2023 - November 2025",
-      "duration": "2 yrs 9 mos",
       "type": "On-site",
       "descriptions": {
         "desc1": "Developed and maintained web applications using modern front-end and back-end technologies, ensuring seamless integration and optimal performance",
@@ -75,13 +73,12 @@
       "company": "Sevago Careers",
       "location": "Ho Chi Minh City, Vietnam",
       "period": "November 2025 - May 2026",
-      "duration": "3 mos",
       "type": "On-site",
       "employmentType": "Full-time",
       "descriptions": {
-        "desc1": "Develop and optimize software applications using modern technologies",
-        "desc2": "Participate in the design and development of new features for the system",
-        "desc3": "Ensure code quality through code reviews and testing"
+        "desc1": "Develop software for gold warehouse production stage management: track production stages, gold quality control, and stage productivity by personnel",
+        "desc2": "Build the system with React and .NET 9, using MySQL and SQL Server; deploy the project on Azure",
+        "desc3": "Contribute to feature design, performance optimization, and code quality through reviews and testing"
       }
     }
   },
@@ -118,31 +115,31 @@
       "linksNote": "Demo and repo are available upon request.",
       "period": "03/2023 - 11/2025"
     },
-    "plant": {
-      "title": "Plant Management Website",
-      "summary": "Plant management system for tracking tree growth, location, and customer contributions.",
-      "problem": "Needed a unified dashboard to monitor plant status and keep customers engaged post-purchase.",
-      "challenge": "The client required real-time location tracking for thousands of trees with GPS coordinates. Initial implementation caused performance issues when querying large datasets, leading to 5+ second load times for the dashboard.",
-      "solution": "I optimized database queries by adding proper indexes on location fields and implemented pagination. Created a geospatial search using PostgreSQL PostGIS extension for efficient location-based queries. Used Entity Framework's spatial data types and worked with the senior developer to review the query optimization approach.",
-      "outcome": "Delivered tracking workflows and admin tools for continuous updates. Dashboard load time reduced from 5+ seconds to under 1 second, supporting 10,000+ tree records.",
-      "role": "Backend Developer (C#/.NET APIs)",
+    "mfott": {
+      "title": "MFOTT Elearning",
+      "summary": "E-learning platform for employee skills training: role-based access, course assignment, evaluation, and reporting.",
+      "problem": "The business needed a centralized system to manage internal training, user permissions, and employee learning progress.",
+      "challenge": "Multiple interconnected modules (courses, permissions, evaluation, reporting, email) in a microservice architecture required reliable data sync via message queues and efficient stored procedure calls.",
+      "solution": "Built with microservice and DDD patterns using .NET Core 3 backend and Angular 8 frontend. Integrated RabbitMQ for async communication, email notifications, and stored procedures for complex business logic. Used Postman for API testing during development.",
+      "outcome": "Delivered course assignment, employee evaluation, and training reports with flexible permissions and automated email notifications.",
+      "role": "Fullstack Developer (.NET, Angular)",
       "demoUrl": "",
       "repoUrl": "",
       "linksNote": "Demo and repo are available upon request.",
-      "period": "03/2024 - 07/2024 | 05/2025 - 07/2025"
+      "period": "05/2026 - Present"
     },
-    "sale": {
-      "title": "Sale Miniapp",
-      "summary": "Miniapp for browsing products, checkout, and VNPay payments inside Zalo.",
-      "problem": "Needed a lightweight in-app checkout and order history for users.",
-      "challenge": "VNPay payment integration required handling redirects within Zalo's webview environment. The payment callback was failing because Zalo's webview blocked certain redirect patterns, causing users to lose their order state.",
-      "solution": "I implemented a state management solution using React Context and localStorage to persist order data across redirects. Created a payment status polling mechanism to check transaction completion when direct callbacks failed. Worked with the backend team to design a webhook-based fallback system and tested various redirect scenarios in Zalo's environment.",
-      "outcome": "Implemented payment flow and order history to speed up purchases. Payment success rate improved from 75% to 95%, with seamless user experience across Zalo's webview constraints.",
-      "role": "Frontend Developer (React)",
+    "congLuongCom": {
+      "title": "Management for Work, Wages, and Meals",
+      "summary": "Software for managing gold warehouse production stages: stage tracking, gold quality control, and productivity by personnel.",
+      "problem": "Gold warehouse production workflows were fragmented, making it hard to track quality and stage productivity by staff.",
+      "challenge": "Needed to model multiple production stages, manage gold quality, and measure productivity by person while keeping queries performant on MySQL and SQL Server.",
+      "solution": "Built a fullstack app with React and .NET 9, using MySQL and SQL Server for data storage. Deployed on Azure and used Postman to test APIs and validate stage workflows.",
+      "outcome": "Enabled production stage tracking, gold quality control, and personnel productivity reporting on Azure.",
+      "role": "Fullstack Developer (React, .NET 9)",
       "demoUrl": "",
       "repoUrl": "",
       "linksNote": "Demo and repo are available upon request.",
-      "period": "7/2024 - 12/2024"
+      "period": "11/2025 - 05/2026"
     }
   },
   "education": {

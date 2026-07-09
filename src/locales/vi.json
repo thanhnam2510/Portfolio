@@ -46,13 +46,12 @@
       "company": "Amaris Consulting",
       "location": "TP. Hồ Chí Minh, Việt Nam",
       "period": "Tháng 5/2026 - Hiện tại",
-      "duration": "1 tháng",
       "type": "On-site",
       "employmentType": "Full-time",
       "descriptions": {
-        "desc1": "Tham gia phát triển và bảo trì các hệ thống phần mềm phục vụ dự án cho công ty Bosch tại khu vực Long Thành",
-        "desc2": "Phối hợp với các team liên quan để phân tích yêu cầu, triển khai tính năng và đảm bảo tiến độ bàn giao",
-        "desc3": "Tối ưu chất lượng code, hỗ trợ xử lý lỗi và cải thiện hiệu năng hệ thống trong môi trường production"
+        "desc1": "Phát triển web quản lý khóa học đào tạo kỹ năng cho nhân viên (MFOTT Elearning): phân quyền, assign khóa học, đánh giá nhân viên và báo cáo",
+        "desc2": "Xây dựng theo mô hình microservice và DDD với backend .NET Core 3 và frontend Angular 8; tích hợp gửi email, RabbitMQ và gọi stored procedures",
+        "desc3": "Phối hợp team phân tích yêu cầu, triển khai tính năng và đảm bảo chất lượng code trong môi trường production"
       }
     },
     "aegona": {
@@ -60,7 +59,6 @@
       "company": "Software Development Aegona Ltd",
       "location": "Quận 12, TP. Hồ Chí Minh, Việt Nam",
       "period": "Tháng 3/2023 - Tháng 11/2025",
-      "duration": "2 năm 9 tháng",
       "type": "On-site",
       "descriptions": {
         "desc1": "Phát triển và duy trì các ứng dụng web sử dụng công nghệ front-end và back-end hiện đại, đảm bảo tích hợp liền mạch và hiệu suất tối ưu",
@@ -75,13 +73,12 @@
       "company": "Sevago Careers",
       "location": "TP. Hồ Chí Minh, Việt Nam",
       "period": "Tháng 11/2025 - Tháng 5/2026",
-      "duration": "3 tháng",
       "type": "On-site",
       "employmentType": "Full-time",
       "descriptions": {
-        "desc1": "Phát triển và tối ưu hóa các ứng dụng phần mềm sử dụng công nghệ hiện đại",
-        "desc2": "Tham gia vào quá trình thiết kế và phát triển các tính năng mới cho hệ thống",
-        "desc3": "Đảm bảo chất lượng code thông qua code review và testing"
+        "desc1": "Phát triển phần mềm quản lý các công đoạn sản xuất vàng kho bãi: theo dõi công đoạn sản xuất, quản lý chất lượng vàng và năng suất công đoạn theo con người",
+        "desc2": "Xây dựng hệ thống với React và .NET 9, sử dụng MySQL cùng SQL Server; deploy dự án lên Azure",
+        "desc3": "Tham gia thiết kế tính năng, tối ưu hiệu năng và đảm bảo chất lượng code qua code review và testing"
       }
     }
   },
@@ -118,31 +115,31 @@
       "linksNote": "Demo và repo có thể cung cấp khi được yêu cầu.",
       "period": "03/2023 - 11/2025"
     },
-    "plant": {
-      "title": "Plant Management Website",
-      "summary": "Hệ thống quản lý cây trồng theo dõi tăng trưởng, vị trí và đóng góp của khách hàng.",
-      "problem": "Cần một dashboard thống nhất để theo dõi trạng thái cây và tương tác sau mua.",
-      "challenge": "Khách hàng yêu cầu theo dõi vị trí real-time cho hàng nghìn cây với tọa độ GPS. Triển khai ban đầu gây ra vấn đề hiệu năng khi query dataset lớn, dẫn đến thời gian load dashboard 5+ giây.",
-      "solution": "Tôi tối ưu database queries bằng cách thêm indexes phù hợp trên các trường location và triển khai pagination. Tạo geospatial search sử dụng PostgreSQL PostGIS extension cho các truy vấn dựa trên vị trí hiệu quả. Sử dụng spatial data types của Entity Framework và làm việc với senior developer để review cách tiếp cận tối ưu query.",
-      "outcome": "Xây dựng luồng theo dõi và công cụ admin để cập nhật liên tục. Thời gian load dashboard giảm từ 5+ giây xuống dưới 1 giây, hỗ trợ 10,000+ bản ghi cây.",
-      "role": "Backend Developer (C#/.NET APIs)",
+    "mfott": {
+      "title": "MFOTT Elearning",
+      "summary": "Nền tảng e-learning quản lý khóa học đào tạo kỹ năng cho nhân viên: phân quyền, assign khóa học, đánh giá và báo cáo.",
+      "problem": "Doanh nghiệp cần hệ thống tập trung để quản lý đào tạo nội bộ, phân quyền người dùng và theo dõi tiến độ học tập của nhân viên.",
+      "challenge": "Hệ thống yêu cầu nhiều module liên kết (khóa học, phân quyền, đánh giá, báo cáo, email) trong kiến trúc microservice; cần đồng bộ dữ liệu qua message queue và gọi stored procedures hiệu quả.",
+      "solution": "Xây dựng theo mô hình microservice và DDD với backend .NET Core 3, frontend Angular 8. Tích hợp RabbitMQ cho giao tiếp bất đồng bộ, gửi email thông báo, và gọi stored procedures cho các nghiệp vụ phức tạp. Sử dụng Postman để kiểm thử API trong quá trình phát triển.",
+      "outcome": "Hoàn thiện luồng assign khóa học, đánh giá nhân viên và báo cáo đào tạo; hỗ trợ phân quyền linh hoạt và gửi thông báo email tự động.",
+      "role": "Fullstack Developer (.NET, Angular)",
       "demoUrl": "",
       "repoUrl": "",
       "linksNote": "Demo và repo có thể cung cấp khi được yêu cầu.",
-      "period": "3/2024 - 7/2024 | 5/2025 - 7/2025"
+      "period": "05/2026 - Hiện tại"
     },
-    "sale": {
-      "title": "Sale Miniapp",
-      "summary": "Miniapp giúp duyệt sản phẩm, đặt hàng và thanh toán VNPay ngay trong Zalo.",
-      "problem": "Cần checkout nhẹ trong app và lịch sử đơn hàng cho người dùng.",
-      "challenge": "Tích hợp thanh toán VNPay yêu cầu xử lý redirects trong môi trường webview của Zalo. Payment callback bị lỗi vì webview của Zalo chặn một số pattern redirect nhất định, khiến người dùng mất trạng thái đơn hàng.",
-      "solution": "Tôi triển khai giải pháp quản lý state sử dụng React Context và localStorage để lưu trữ dữ liệu đơn hàng qua các lần redirect. Tạo cơ chế polling payment status để kiểm tra hoàn tất giao dịch khi direct callbacks thất bại. Làm việc với backend team để thiết kế hệ thống fallback dựa trên webhook và test nhiều kịch bản redirect trong môi trường Zalo.",
-      "outcome": "Triển khai luồng thanh toán và lịch sử đơn giúp mua nhanh hơn. Tỷ lệ thành công thanh toán cải thiện từ 75% lên 95%, với trải nghiệm người dùng mượt mà trong các ràng buộc webview của Zalo.",
-      "role": "Frontend Developer (React)",
+    "congLuongCom": {
+      "title": "Công lương cơm",
+      "summary": "Phần mềm quản lý các công đoạn sản xuất vàng kho bãi: theo dõi công đoạn, chất lượng vàng và năng suất theo con người.",
+      "problem": "Quy trình sản xuất vàng kho bãi còn phân tán, khó theo dõi chất lượng và năng suất từng công đoạn theo nhân sự.",
+      "challenge": "Cần mô hình hóa nhiều công đoạn sản xuất, quản lý chất lượng vàng và đo năng suất theo người; đồng thời đảm bảo hiệu năng khi truy vấn dữ liệu lớn trên MySQL và SQL Server.",
+      "solution": "Phát triển fullstack với React và .NET 9, lưu trữ dữ liệu trên MySQL và SQL Server. Deploy ứng dụng lên Azure; dùng Postman để kiểm thử API và theo dõi luồng nghiệp vụ từng công đoạn.",
+      "outcome": "Hệ thống hỗ trợ theo dõi công đoạn sản xuất, kiểm soát chất lượng vàng và báo cáo năng suất theo nhân sự trên môi trường Azure.",
+      "role": "Fullstack Developer (React, .NET 9)",
       "demoUrl": "",
       "repoUrl": "",
       "linksNote": "Demo và repo có thể cung cấp khi được yêu cầu.",
-      "period": "7/2024 - 12/2024"
+      "period": "11/2025 - 05/2026"
     }
   },
   "education": {
