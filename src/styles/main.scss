@@ -1,18 +1,3 @@
-@import './shared/variables';
-@import './shared/mixins';
-@import './shared/base';
-@import './shared/Button';
-@import './shared/Card';
-@import './shared/SectionTitle';
-@import './shared/BackToTop';
-
-// Component Styles
-@import './components/Navigation';
-@import './components/Hero';
-@import './components/About';
-@import './components/Skills';
-@import './components/Experience';
-@import './components/Projects';
-@import './components/Education';
-@import './components/Contact';
-
+// Global layer only; each component imports its own stylesheet.
+@use 'base/root';
+@use 'base/global';

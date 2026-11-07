@@ -1,12 +1,13 @@
+import '@/styles/main.scss'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { LanguageProvider } from './js/shared/LanguageContext'
-import App from './App.jsx'
+import AppProviders from '@/app/AppProviders'
+import App from '@/app/App'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <LanguageProvider>
+    <AppProviders>
       <App />
-    </LanguageProvider>
+    </AppProviders>
   </StrictMode>,
 )

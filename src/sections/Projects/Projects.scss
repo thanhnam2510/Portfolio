@@ -1,0 +1,191 @@
+@use 'abstracts' as *;
+
+.projects__subheading {
+  margin: $space-16 0 $space-6;
+  color: $color-text;
+  font-size: $text-2xl;
+  font-weight: $weight-bold;
+
+  @include mobile {
+    margin-top: $space-12;
+    font-size: $text-xl;
+  }
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+  align-items: start;
+  gap: $space-6;
+  list-style: none;
+
+  > li {
+    min-width: 0;
+  }
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+    gap: $space-4;
+  }
+}
+
+// ---------------------------------------------------------- project card
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: $space-6;
+
+  @include mobile {
+    padding: $space-5;
+  }
+}
+
+.project-card__title {
+  margin-bottom: $space-3;
+  color: $color-text;
+  font-size: $text-xl;
+  font-weight: $weight-bold;
+  line-height: 1.3;
+}
+
+.project-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+  margin-bottom: $space-3;
+  list-style: none;
+}
+
+.project-card__role {
+  margin-bottom: $space-3;
+  color: $color-primary-strong;
+  font-size: $text-sm;
+  font-weight: $weight-medium;
+
+  strong {
+    font-weight: $weight-bold;
+  }
+}
+
+.project-card__summary {
+  margin-bottom: $space-4;
+  color: $color-text-muted;
+  line-height: 1.65;
+}
+
+.project-card__details {
+  margin-bottom: $space-4;
+
+  summary {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-2;
+    padding: $space-1 0;
+    border-radius: $radius-sm;
+    color: $color-primary;
+    font-size: $text-sm;
+    font-weight: $weight-bold;
+    cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: rotate(45deg) translateY(-2px);
+      transition: transform $transition-fast;
+    }
+
+    &:hover {
+      color: $color-primary-strong;
+    }
+  }
+
+  .when-open {
+    display: none;
+  }
+
+  &[open] {
+    summary::after {
+      transform: rotate(-135deg) translateY(-2px);
+    }
+
+    .when-open {
+      display: inline;
+    }
+
+    .when-closed {
+      display: none;
+    }
+  }
+
+  dl {
+    display: grid;
+    gap: $space-3;
+    margin-top: $space-3;
+  }
+}
+
+// Detail blocks share one shape; only the accent colour differs.
+.project-card__block {
+  --block-accent: var(--color-neutral-400);
+  --block-bg: var(--color-neutral-50);
+
+  padding: $space-3 $space-4;
+  border-left: 3px solid var(--block-accent);
+  border-radius: 0 $radius-sm $radius-sm 0;
+  background: var(--block-bg);
+  font-size: $text-sm;
+  line-height: 1.6;
+
+  dt {
+    margin-bottom: $space-1;
+    color: $color-text;
+    font-weight: $weight-bold;
+  }
+
+  dd {
+    color: var(--color-neutral-700);
+  }
+
+  &--challenge {
+    --block-accent: var(--color-warning-500);
+    --block-bg: var(--color-warning-50);
+  }
+
+  &--solution {
+    --block-accent: var(--color-primary-500);
+    --block-bg: var(--color-primary-50);
+  }
+
+  &--outcome {
+    --block-accent: var(--color-success-600);
+    --block-bg: var(--color-success-50);
+  }
+}
+
+.project-card__footer {
+  margin-top: auto;
+  padding-top: $space-4;
+  border-top: 1px solid $color-border;
+}
+
+.project-card__links {
+  display: flex;
+  gap: $space-4;
+  margin-top: $space-4;
+  font-size: $text-sm;
+  font-weight: $weight-semibold;
+}
+
+.project-card__note {
+  margin-top: $space-4;
+  color: $color-text-subtle;
+  font-size: $text-sm;
+}

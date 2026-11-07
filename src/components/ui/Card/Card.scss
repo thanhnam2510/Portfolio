@@ -1,0 +1,9 @@
+@use 'abstracts' as *;
+
+.card {
+  @include card;
+}
+
+.card--hover:hover {
+  @include card-hover;
+}

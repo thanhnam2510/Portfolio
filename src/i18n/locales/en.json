@@ -1,0 +1,236 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "education": "Education",
+    "contact": "Contact",
+    "menu": "Toggle menu",
+    "language": "Language",
+    "backToTop": "Back to top"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Nguyen Huu Thanh Nam",
+    "title": "Middle Fullstack Developer · C#/.NET · React · Next.js · Node.js · Angular",
+    "description": "I build robust backend services with C#/.NET and Node.js, create clean React and Next.js interfaces, and work with various databases and modern tools. Strong in full-stack development with expertise across multiple technologies.",
+    "projectsBtn": "View Projects",
+    "downloadCv": "Download CV",
+    "current": "Currently: Software Engineer at Amaris Consulting",
+    "years": "{years}+ years building scalable web applications",
+    "featured": "Explore TeamFlow"
+  },
+  "about": {
+    "title": "About",
+    "description1": "I'm a Middle Fullstack Developer with {years}+ years of experience building scalable web applications. My journey started with systems analysis and has evolved into full-stack development, where I've successfully delivered 15+ production applications for clients across various industries.",
+    "description2": "On the backend I build RESTful APIs and services with C#/.NET (ASP.NET Core, from .NET Core 3 to .NET 10) and Entity Framework Core, as well as Node.js with Express/NestJS. I've worked with microservice and DDD architectures, RabbitMQ messaging, real-time features with SignalR, and SQL Server, MySQL, PostgreSQL and MongoDB — choosing the right tool for each problem.",
+    "description3": "On the frontend I build Angular (signals, Angular Material) and React/Next.js applications in TypeScript, focusing on clean component architecture, performance and user experience, and I'm comfortable with SCSS and Tailwind CSS. For my personal project TeamFlow I containerised and shipped it with Docker and CI/CD, integrated video meetings with LiveKit (WebRTC), and wrote tests from unit to end-to-end.",
+    "description4": "Beyond coding, I bring strong problem-solving skills, experience with Agile/Scrum methodologies, and the ability to work under pressure to meet tight deadlines. I've led small teams as a TechLead, conducted code reviews, and mentored junior developers. My English level is B2 (Efset 52), enabling effective communication in international teams.",
+    "description5": "I'm actively seeking middle fullstack opportunities where I can take ownership of features from design to deployment, work with modern tech stacks (C#/.NET, React, Node.js, Next.js, and more), and contribute to meaningful products. I'm particularly interested in roles that leverage my diverse technical expertise while allowing me to grow into more senior responsibilities.",
+    "stats": {
+      "clients": "Clients Served",
+      "experience": "Years of Experience",
+      "technologies": "Technologies Used"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Databases",
+      "realtime": "Realtime & Messaging",
+      "devops": "DevOps & Tools",
+      "learning": "Currently learning"
+    }
+  },
+  "experience": {
+    "title": "Work Experience",
+    "amaris": {
+      "position": "Software Engineer",
+      "company": "Amaris Consulting",
+      "location": "Ho Chi Minh City, Vietnam",
+      "period": "May 2026 - Present",
+      "type": "On-site",
+      "employmentType": "Full-time",
+      "descriptions": {
+        "desc1": "Develop an employee skills training course management web app (MFOTT Elearning): role-based access, course assignment, employee evaluation, and reporting",
+        "desc2": "Build with a microservice and DDD architecture using .NET Core 3 backend and Angular 8 frontend; integrate email notifications, RabbitMQ, and stored procedure calls",
+        "desc3": "Collaborate with the team on requirements, feature delivery, and code quality in production environments"
+      }
+    },
+    "aegona": {
+      "position": "Software Engineer",
+      "company": "Software Development Aegona Ltd",
+      "location": "District 12, Ho Chi Minh City, Vietnam",
+      "period": "March 2023 - November 2025",
+      "type": "On-site",
+      "descriptions": {
+        "desc1": "Developed and maintained web applications using modern front-end and back-end technologies, ensuring seamless integration and optimal performance",
+        "desc2": "Collaborated with cross-functional teams, including designers, product managers, and QA engineers, to deliver high-quality software products within tight deadlines",
+        "desc3": "Designed and implemented RESTful APIs to facilitate efficient communication between front-end and back-end systems",
+        "desc4": "Conducted code reviews and provided mentorship to junior developers to maintain code quality and foster team growth",
+        "desc5": "Led a small team of 4-5 developers as a TechLead, overseeing project planning, task delegation, and technical guidance to ensure timely delivery and alignment with project goals"
+      }
+    },
+    "sevago": {
+      "position": "Software Engineer",
+      "company": "Sevago Careers",
+      "location": "Ho Chi Minh City, Vietnam",
+      "period": "November 2025 - May 2026",
+      "type": "On-site",
+      "employmentType": "Full-time",
+      "descriptions": {
+        "desc1": "Develop software for gold warehouse production stage management: track production stages, gold quality control, and stage productivity by personnel",
+        "desc2": "Build the system with React and .NET 9, using MySQL and SQL Server; deploy the project on Azure",
+        "desc3": "Contribute to feature design, performance optimization, and code quality through reviews and testing"
+      }
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "labels": {
+      "role": "Role",
+      "problem": "Problem",
+      "challenge": "Challenge",
+      "solution": "Solution",
+      "outcome": "Outcome",
+      "demo": "Live Demo",
+      "details": "Project details",
+      "hide": "Show less",
+      "live": "Visit product site",
+      "personal": "Personal project",
+      "featured": "Featured project",
+      "stack": "Tech stack",
+      "engineering": "Engineering highlights",
+      "gallery": "Screenshots"
+    },
+    "team": "Team",
+    "pandaloyalty": {
+      "title": "PandaLoyalty - Customer Management Website",
+      "summary": "Customer loyalty platform to manage members, points, rewards, and omnichannel integrations.",
+      "problem": "Manual reward workflows and fragmented POS/CRM data across partners.",
+      "challenge": "During integration with KiotViet POS system, I faced API rate limiting issues that caused transaction failures during peak hours. The system needed to handle 500+ concurrent requests while maintaining data consistency across multiple partner systems.",
+      "solution": "I implemented a retry mechanism with exponential backoff and created a queue system using .NET Core Background Services. I also added caching for frequently accessed partner data and implemented circuit breaker pattern to prevent cascading failures. Collaborated with the team lead to design the architecture and received code review feedback.",
+      "outcome": "Automated reward redemption and streamlined integrations, reducing manual operations for client teams. System now handles 1000+ requests/minute with 99.5% success rate.",
+      "role": "Fullstack Developer (C#/.NET, Integrations)",
+      "demoUrl": "",
+      "linksNote": "Demo available upon request.",
+      "period": "03/2023 - 11/2025"
+    },
+    "mfott": {
+      "title": "MFOTT Elearning",
+      "summary": "E-learning platform for employee skills training: role-based access, course assignment, evaluation, and reporting.",
+      "problem": "The business needed a centralized system to manage internal training, user permissions, and employee learning progress.",
+      "challenge": "Multiple interconnected modules (courses, permissions, evaluation, reporting, email) in a microservice architecture required reliable data sync via message queues and efficient stored procedure calls.",
+      "solution": "Built with microservice and DDD patterns using .NET Core 3 backend and Angular 8 frontend. Integrated RabbitMQ for async communication, email notifications, and stored procedures for complex business logic. Used Postman for API testing during development.",
+      "outcome": "Delivered course assignment, employee evaluation, and training reports with flexible permissions and automated email notifications.",
+      "role": "Fullstack Developer (.NET, Angular)",
+      "demoUrl": "",
+      "linksNote": "Demo available upon request.",
+      "period": "05/2026 - Present"
+    },
+    "congLuongCom": {
+      "title": "Management for Work, Wages, and Meals",
+      "summary": "Software for managing gold warehouse production stages: stage tracking, gold quality control, and productivity by personnel.",
+      "problem": "Gold warehouse production workflows were fragmented, making it hard to track quality and stage productivity by staff.",
+      "challenge": "Needed to model multiple production stages, manage gold quality, and measure productivity by person while keeping queries performant on MySQL and SQL Server.",
+      "solution": "Built a fullstack app with React and .NET 9, using MySQL and SQL Server for data storage. Deployed on Azure and used Postman to test APIs and validate stage workflows.",
+      "outcome": "Enabled production stage tracking, gold quality control, and personnel productivity reporting on Azure.",
+      "role": "Fullstack Developer (React, .NET 9)",
+      "demoUrl": "",
+      "linksNote": "Demo available upon request.",
+      "period": "11/2025 - 05/2026"
+    },
+    "subtitle": "A product I built end to end, plus projects I delivered at work.",
+    "others": "Client & company projects",
+    "teamflow": {
+      "title": "TeamFlow",
+      "tagline": "A work-management and internal-operations platform for companies",
+      "summary": "TeamFlow brings a company’s day-to-day work into one place: projects and tasks, video meetings, chat, timesheets, leave, internal requests, assets, budgets and performance reviews. I designed and built the whole frontend, backend and landing page myself.",
+      "role": "Fullstack Developer — design, development, deployment",
+      "linksNote": "A live walkthrough of the full system is available upon request.",
+      "groups": {
+        "collaborate": {
+          "title": "Collaboration",
+          "items": [
+            "Workspaces, projects, Kanban and timeline",
+            "Meeting calendar, video rooms (LiveKit) and recordings",
+            "Chat, team feed and realtime notifications"
+          ]
+        },
+        "work": {
+          "title": "Work tracking",
+          "items": [
+            "Work logs, timesheets and approvals",
+            "Workload, weekly plans and reports",
+            "Project budgets and costs from staff rates"
+          ]
+        },
+        "people": {
+          "title": "People",
+          "items": [
+            "Org chart, onboarding and invitation emails",
+            "Leave with monthly accrual",
+            "Performance reviews: weights, goals/KRs, 360°"
+          ]
+        },
+        "operations": {
+          "title": "Operations & security",
+          "items": [
+            "Internal requests: form builder, auto-routing",
+            "Asset management: handover, QR, maintenance, audits",
+            "Security & audit center, backup and restore"
+          ]
+        }
+      },
+      "engineering": [
+        ".NET 10 backend with a layered architecture (Controller → Service → Repository), EF Core 9 on MySQL with migrations",
+        "Realtime via SignalR for chat, notifications and presence; video meetings on LiveKit",
+        "Zoneless Angular 22 frontend with signals and Material 3; Vietnamese/English, light/dark themes",
+        "Tested at several levels: backend/frontend unit tests, API tests and browser e2e"
+      ],
+      "shots": {
+        "home": "Overview",
+        "kanban": "Project Kanban",
+        "room": "Video meeting room",
+        "requests": "Internal requests",
+        "assets": "Asset management",
+        "perf": "Performance review"
+      }
+    }
+  },
+  "education": {
+    "title": "Education & Certifications",
+    "certifications": "Certifications",
+    "degree": "Engineering Degree in Software Engineering",
+    "school": "DaLat University",
+    "description": "Graduated with a degree in Software Engineering. During studies, participated in many projects and research on software development, building a solid foundation for a software development career.",
+    "credentialId": "Credential ID"
+  },
+  "contact": {
+    "title": "Contact",
+    "note": "Open to middle fullstack opportunities with C#/.NET, React, Node.js, Next.js, and modern web technologies.",
+    "labels": {
+      "email": "Email",
+      "mobile": "Mobile",
+      "address": "Address",
+      "linkedin": "LinkedIn"
+    },
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "sending": "Sending..."
+    },
+    "success": "Thank you for contacting me! I'll respond as soon as possible.",
+    "error": "Sorry, there was an error sending your message. Please try again or contact me directly at namnguyenhuuthanh@gmail.com"
+  },
+  "footer": {
+    "rights": "Designed and built with React & Vite."
+  }
+}

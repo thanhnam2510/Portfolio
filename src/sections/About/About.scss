@@ -1,0 +1,90 @@
+@use 'abstracts' as *;
+
+.about__content {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.about__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: $space-4;
+  margin-bottom: $space-10;
+  list-style: none;
+
+  @include small {
+    grid-template-columns: 1fr;
+    gap: $space-3;
+  }
+}
+
+.about__stat {
+  @include card;
+
+  &:hover {
+    @include card-hover;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-1;
+  padding: $space-6 $space-4;
+  text-align: center;
+
+  @include small {
+    flex-direction: row;
+    justify-content: center;
+    gap: $space-3;
+    padding: $space-4;
+  }
+}
+
+.about__stat-value {
+  @include gradient-text;
+  font-size: $text-5xl;
+  font-weight: $weight-extrabold;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  letter-spacing: -0.03em;
+
+  @include mobile {
+    font-size: $text-4xl;
+  }
+
+  @include small {
+    font-size: $text-3xl;
+  }
+}
+
+.about__stat-label {
+  color: $color-text-muted;
+  font-size: $text-sm;
+  font-weight: $weight-semibold;
+}
+
+.about__text p {
+  margin-bottom: $space-5;
+  color: $color-text-muted;
+  font-size: $text-lg;
+  line-height: 1.8;
+
+  &:first-child {
+    color: $color-text;
+    font-size: $text-xl;
+    font-weight: $weight-medium;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include mobile {
+    font-size: $text-base;
+    line-height: 1.7;
+
+    &:first-child {
+      font-size: $text-lg;
+    }
+  }
+}

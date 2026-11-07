@@ -1,0 +1,134 @@
+@use 'abstracts' as *;
+
+.timeline {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+  padding-left: $space-10;
+  list-style: none;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: $space-2;
+    bottom: $space-2;
+    left: 11px;
+    width: 2px;
+    border-radius: 2px;
+    background: linear-gradient(180deg, var(--color-primary-500), var(--color-accent-500) 60%, $color-border);
+  }
+
+  @include mobile {
+    padding-left: $space-8;
+
+    &::before {
+      left: 7px;
+    }
+  }
+}
+
+.timeline__item {
+  position: relative;
+
+  & + & {
+    margin-top: $space-6;
+  }
+}
+
+.timeline__marker {
+  position: absolute;
+  top: $space-6;
+  left: calc(-1 * #{$space-10} + 4px);
+  width: 16px;
+  height: 16px;
+  border: 3px solid $color-surface;
+  border-radius: 50%;
+  background: var(--color-primary-300);
+  box-shadow: 0 0 0 2px var(--color-primary-300);
+
+  .is-current & {
+    background: $color-primary;
+    box-shadow: 0 0 0 2px $color-primary, 0 0 0 7px var(--color-primary-100);
+  }
+
+  @include mobile {
+    left: calc(-1 * #{$space-8});
+  }
+}
+
+.timeline__card {
+  @include card;
+  padding: $space-6 $space-8;
+
+  &:hover {
+    @include card-hover;
+  }
+
+  @include mobile {
+    padding: $space-5;
+  }
+}
+
+.timeline__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: $space-2 $space-4;
+  margin-bottom: $space-4;
+}
+
+.timeline__role {
+  color: $color-text;
+  font-size: $text-xl;
+  font-weight: $weight-bold;
+}
+
+.timeline__company {
+  color: $color-primary;
+  font-size: $text-lg;
+  font-weight: $weight-semibold;
+}
+
+.timeline__location {
+  color: $color-text-subtle;
+  font-size: $text-sm;
+}
+
+.timeline__period {
+  color: $color-text-muted;
+  font-size: $text-sm;
+  font-weight: $weight-semibold;
+  white-space: nowrap;
+}
+
+.timeline__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+  margin-bottom: $space-4;
+  list-style: none;
+}
+
+.timeline__points {
+  display: grid;
+  gap: $space-2;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: $space-5;
+    color: $color-text-muted;
+    line-height: 1.65;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0.65em;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $color-primary;
+    }
+  }
+}

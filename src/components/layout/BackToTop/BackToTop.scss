@@ -1,0 +1,45 @@
+@use 'abstracts' as *;
+
+.back-to-top {
+  position: fixed;
+  right: $space-6;
+  bottom: $space-6;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: $gradient-brand;
+  color: $color-text-inverse;
+  box-shadow: $shadow-brand;
+  cursor: pointer;
+  animation: back-to-top-in $duration-base $ease-out;
+  transition: transform $transition-fast, box-shadow $transition-base;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-brand-lg;
+  }
+
+  @include mobile {
+    right: $space-4;
+    bottom: $space-4;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@keyframes back-to-top-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}

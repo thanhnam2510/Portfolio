@@ -1,0 +1,242 @@
+@use 'abstracts' as *;
+
+.featured {
+  @include card;
+  position: relative;
+  padding: $space-8;
+  overflow: hidden;
+  box-shadow: $shadow-lg;
+
+  // Brand stripe.
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto;
+    height: 4px;
+    background: $gradient-brand;
+  }
+
+  @include mobile {
+    padding: $space-5;
+  }
+}
+
+.featured__header {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+  margin-bottom: $space-6;
+}
+
+.featured__logo {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-brand;
+}
+
+.featured__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+  margin-bottom: $space-1;
+
+  .tag {
+    font-size: $text-xs;
+    font-weight: $weight-bold;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+}
+
+.featured__title {
+  color: $color-text;
+  font-size: $text-4xl;
+  font-weight: $weight-extrabold;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+
+  @include mobile {
+    font-size: $text-3xl;
+  }
+}
+
+.featured__tagline {
+  margin-top: $space-1;
+  color: $color-text-muted;
+  font-size: $text-lg;
+
+  @include mobile {
+    font-size: $text-base;
+  }
+}
+
+.featured__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  align-items: start;
+  gap: $space-8;
+
+  @include tablet-down {
+    grid-template-columns: 1fr;
+    gap: $space-6;
+  }
+}
+
+.featured__screen {
+  position: relative;
+  aspect-ratio: 1200 / 766;
+  overflow: hidden;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  background: $color-surface-sunken;
+  box-shadow: $shadow-md;
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top left;
+  }
+}
+
+.featured__caption {
+  display: block;
+  min-height: 1.6em;
+  margin: $space-3 0;
+  color: $color-text-muted;
+  font-size: $text-sm;
+  font-weight: $weight-semibold;
+  text-align: center;
+}
+
+.featured__thumbs {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: $space-2;
+
+  @include small {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.featured__thumb {
+  aspect-ratio: 1200 / 766;
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid $color-border;
+  border-radius: $radius-sm;
+  background: none;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity $transition-fast, border-color $transition-fast, transform $transition-fast;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top left;
+  }
+
+  &:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+
+  &.is-active {
+    border-color: $color-primary;
+    opacity: 1;
+  }
+}
+
+.featured__summary {
+  margin-bottom: $space-3;
+  color: $color-text;
+  line-height: 1.7;
+}
+
+.featured__role {
+  margin-bottom: $space-5;
+  color: $color-text-muted;
+  font-size: $text-sm;
+}
+
+.featured__groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: $space-3;
+
+  @include small {
+    grid-template-columns: 1fr;
+  }
+}
+
+.featured__group {
+  padding: $space-4;
+  border: 1px solid var(--color-primary-100);
+  border-radius: $radius-md;
+  background: $color-primary-soft;
+
+  h4 {
+    margin-bottom: $space-2;
+    color: $color-primary-strong;
+    font-size: $text-sm;
+    font-weight: $weight-bold;
+  }
+
+  ul {
+    display: grid;
+    gap: $space-1;
+    padding-left: $space-4;
+    color: var(--color-neutral-700);
+    font-size: $text-sm;
+    line-height: 1.55;
+  }
+}
+
+.featured__footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: $space-8;
+  margin-top: $space-8;
+  padding-top: $space-6;
+  border-top: 1px solid $color-border;
+
+  @include tablet-down {
+    grid-template-columns: 1fr;
+    gap: $space-6;
+  }
+
+  h4 {
+    margin-bottom: $space-3;
+    color: $color-text;
+    font-size: $text-base;
+    font-weight: $weight-bold;
+  }
+}
+
+.featured__engineering {
+  display: grid;
+  gap: $space-2;
+  padding-left: $space-5;
+  color: $color-text-muted;
+  font-size: $text-sm;
+  line-height: 1.6;
+
+  li::marker {
+    color: $color-primary;
+  }
+}
+
+.featured__cta {
+  margin-top: $space-5;
+}
+
+.featured__note {
+  margin-top: $space-3;
+  color: $color-text-subtle;
+  font-size: $text-sm;
+}

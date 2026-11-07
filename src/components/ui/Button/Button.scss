@@ -1,0 +1,75 @@
+@use 'abstracts' as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  min-height: 48px;
+  padding: $space-3 $space-6;
+  border: 1.5px solid transparent;
+  border-radius: $radius-md;
+  font-size: $text-base;
+  font-weight: $weight-semibold;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform $transition-fast, box-shadow $transition-base, background-color $transition-base, border-color $transition-base;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  @include mobile {
+    min-height: 44px;
+    padding: $space-2 $space-5;
+    font-size: $text-sm;
+  }
+
+  &--primary {
+    background: $gradient-brand;
+    color: $color-text-inverse;
+    box-shadow: $shadow-brand;
+
+    &:hover {
+      box-shadow: $shadow-brand-lg;
+    }
+  }
+
+  // White button for dark backgrounds.
+  &--light {
+    background: $color-surface;
+    color: $color-primary-strong;
+    box-shadow: $shadow-md;
+
+    &:hover {
+      background: $color-primary-soft;
+    }
+  }
+
+  // Ghost button for dark backgrounds.
+  &--outline {
+    border-color: rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.06);
+    color: $color-text-inverse;
+
+    &:hover {
+      border-color: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.12);
+    }
+  }
+
+  &--block {
+    width: 100%;
+  }
+}

@@ -1,0 +1,43 @@
+@use 'abstracts' as *;
+
+.section-heading {
+  max-width: 680px;
+  margin: 0 auto $space-12;
+  text-align: center;
+
+  @include mobile {
+    margin-bottom: $space-8;
+  }
+}
+
+.section-heading__title {
+  color: $color-text;
+  font-size: $text-4xl;
+  font-weight: $weight-extrabold;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 56px;
+    height: 4px;
+    margin: $space-4 auto 0;
+    border-radius: $radius-full;
+    background: $gradient-brand;
+  }
+
+  @include mobile {
+    font-size: $text-3xl;
+  }
+}
+
+.section-heading__lead {
+  margin-top: $space-4;
+  color: $color-text-muted;
+  font-size: $text-lg;
+
+  @include mobile {
+    font-size: $text-base;
+  }
+}

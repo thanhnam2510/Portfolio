@@ -1,0 +1,99 @@
+@use 'abstracts' as *;
+
+.skills__groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: $space-6;
+  list-style: none;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $space-4;
+  }
+}
+
+.skills__group {
+  @include card;
+  padding: $space-8;
+
+  &:hover {
+    border-color: var(--color-primary-200);
+    box-shadow: $shadow-md;
+
+    .skills__group-icon {
+      background: $gradient-brand;
+      color: $color-text-inverse;
+    }
+  }
+
+  @include mobile {
+    padding: $space-5;
+  }
+}
+
+.skills__group-title {
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  margin-bottom: $space-6;
+  color: $color-text;
+  font-size: $text-xl;
+  font-weight: $weight-bold;
+}
+
+.skills__group-icon {
+  @include icon-tile(40px);
+  transition: background-color $transition-base, color $transition-base;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.skills__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 1fr));
+  gap: $space-3;
+  list-style: none;
+
+  @include small {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  padding: $space-3;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background: $color-surface-alt;
+  transition: border-color $transition-fast, background-color $transition-fast, transform $transition-fast;
+
+  &:hover {
+    border-color: var(--color-primary-200);
+    background: $color-surface;
+    box-shadow: $shadow-glow;
+    transform: translateY(-3px);
+
+    .skill__icon {
+      transform: scale(1.18) rotate(-6deg);
+    }
+  }
+}
+
+.skill__icon {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  transition: transform $transition-base;
+}
+
+.skill__name {
+  color: $color-text;
+  font-size: $text-sm;
+  font-weight: $weight-semibold;
+  line-height: 1.3;
+}

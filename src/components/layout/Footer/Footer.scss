@@ -1,0 +1,39 @@
+@use 'abstracts' as *;
+
+.footer {
+  padding: $space-8 0;
+  background: $color-surface-dark;
+  color: var(--color-neutral-400);
+  font-size: $text-sm;
+}
+
+.footer__inner {
+  @include container;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-3;
+
+  @include mobile {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.footer__links {
+  display: flex;
+  gap: $space-6;
+  list-style: none;
+
+  a {
+    color: var(--color-neutral-200);
+    font-weight: $weight-semibold;
+    text-decoration: none;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: var(--color-primary-300);
+    }
+  }
+}

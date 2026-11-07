@@ -1,0 +1,126 @@
+@use 'abstracts' as *;
+
+.contact__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  align-items: start;
+  gap: $space-8;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $space-6;
+  }
+}
+
+.contact__channels {
+  display: grid;
+  gap: $space-3;
+  list-style: none;
+}
+
+.contact__channel {
+  @include card;
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+  padding: $space-4 $space-5;
+  color: inherit;
+  text-decoration: none;
+
+  &--link:hover {
+    @include card-hover;
+  }
+}
+
+.contact__icon {
+  @include icon-tile(44px);
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.contact__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.contact__label {
+  color: $color-text-subtle;
+  font-size: $text-xs;
+  font-weight: $weight-semibold;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.contact__value {
+  color: $color-text;
+  font-weight: $weight-semibold;
+  overflow-wrap: anywhere;
+}
+
+.contact__form {
+  padding: $space-8;
+
+  form {
+    display: grid;
+    gap: $space-4;
+  }
+
+  @include mobile {
+    padding: $space-5;
+  }
+}
+
+.field {
+  input,
+  textarea {
+    width: 100%;
+    padding: $space-3 $space-4;
+    border: 1px solid $color-border-strong;
+    border-radius: $radius-md;
+    background: $color-surface;
+    color: $color-text;
+    font-size: $text-base;
+    transition: border-color $transition-fast, box-shadow $transition-fast;
+
+    &::placeholder {
+      color: $color-text-subtle;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+      box-shadow: 0 0 0 3px var(--color-focus);
+    }
+  }
+
+  textarea {
+    min-height: 140px;
+    resize: vertical;
+  }
+}
+
+.form-status {
+  padding: $space-3 $space-4;
+  border: 1px solid transparent;
+  border-radius: $radius-md;
+  font-size: $text-sm;
+  text-align: center;
+
+  &--success {
+    border-color: color-mix(in srgb, var(--color-success-600) 30%, transparent);
+    background: var(--color-success-50);
+    color: var(--color-success-800);
+  }
+
+  &--error {
+    border-color: color-mix(in srgb, var(--color-danger-600) 30%, transparent);
+    background: var(--color-danger-50);
+    color: var(--color-danger-800);
+  }
+}

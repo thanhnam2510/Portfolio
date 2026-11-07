@@ -1,0 +1,38 @@
+@use 'abstracts' as *;
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-1;
+  padding: $space-1 $space-3;
+  border: 1px solid transparent;
+  border-radius: $radius-full;
+  font-size: $text-sm;
+  font-weight: $weight-medium;
+  line-height: 1.4;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+
+  &--neutral {
+    border-color: $color-border;
+    background: $color-surface-alt;
+    color: var(--color-neutral-700);
+  }
+
+  &--brand {
+    background: $color-primary-soft;
+    color: $color-primary-strong;
+  }
+
+  &--solid {
+    background: $gradient-brand;
+    color: $color-text-inverse;
+  }
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+  list-style: none;
+}

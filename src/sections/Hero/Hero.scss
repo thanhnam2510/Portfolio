@@ -1,0 +1,310 @@
+@use 'abstracts' as *;
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: calc(#{$nav-height} + #{$space-12}) 0 $space-16;
+  overflow: hidden;
+  background: $gradient-hero;
+  color: $color-text-inverse;
+
+  // Faint grid texture.
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+    pointer-events: none;
+  }
+
+  @include mobile {
+    padding: calc(64px + #{$space-8}) 0 $space-12;
+  }
+}
+
+.hero__backdrop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero__blob {
+  position: absolute;
+  width: 36rem;
+  height: 36rem;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.45;
+  will-change: transform;
+  animation: hero-drift 18s ease-in-out infinite alternate;
+
+  &--one {
+    top: -12rem;
+    right: -8rem;
+    background: var(--color-accent-600);
+  }
+
+  &--two {
+    bottom: -14rem;
+    left: -10rem;
+    background: var(--color-primary-500);
+    animation-duration: 22s;
+    animation-delay: -6s;
+  }
+
+  &--three {
+    top: 30%;
+    left: 40%;
+    width: 22rem;
+    height: 22rem;
+    background: var(--color-primary-700);
+    opacity: 0.35;
+    animation-duration: 26s;
+    animation-delay: -12s;
+  }
+
+  @include mobile {
+    width: 22rem;
+    height: 22rem;
+  }
+}
+
+@keyframes hero-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(4rem, 3rem, 0) scale(1.12);
+  }
+
+  100% {
+    transform: translate3d(-3rem, 5rem, 0) scale(0.94);
+  }
+}
+
+.hero__inner {
+  @include container;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  align-items: center;
+  gap: $space-12;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $space-10;
+    text-align: center;
+  }
+}
+
+.hero__status {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  margin-bottom: $space-6;
+  padding: $space-1 $space-4;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: $radius-full;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-neutral-100);
+  font-size: $text-sm;
+  font-weight: $weight-semibold;
+
+  @include mobile {
+    font-size: $text-xs;
+  }
+}
+
+.hero__status-dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-success-400);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-success-400) 25%, transparent);
+}
+
+.hero__title {
+  margin-bottom: $space-5;
+  font-weight: $weight-extrabold;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+
+.hero__greeting {
+  display: block;
+  margin-bottom: $space-2;
+  color: var(--color-neutral-300);
+  font-size: $text-2xl;
+  font-weight: $weight-semibold;
+  letter-spacing: -0.01em;
+
+  @include mobile {
+    font-size: $text-lg;
+  }
+}
+
+.hero__name {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.25em;
+  font-size: $text-6xl;
+
+  @include tablet-down {
+    font-size: $text-5xl;
+  }
+
+  @include mobile {
+    justify-content: center;
+    font-size: $text-4xl;
+  }
+}
+
+// The gradient sits on each word: a clipped parent background would ghost behind moving children.
+.hero__name-word {
+  display: inline-block;
+  background: linear-gradient(100deg, var(--color-neutral-0) 0%, var(--color-primary-200) 60%, var(--color-accent-300) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero__role {
+  margin-bottom: $space-2;
+  color: var(--color-neutral-100);
+  font-size: $text-xl;
+  font-weight: $weight-semibold;
+
+  @include mobile {
+    font-size: $text-base;
+  }
+}
+
+.hero__years {
+  margin-bottom: $space-5;
+  color: var(--color-primary-200);
+  font-size: $text-base;
+  font-weight: $weight-semibold;
+}
+
+.hero__description {
+  max-width: 600px;
+  margin-bottom: $space-8;
+  color: var(--color-neutral-300);
+  font-size: $text-lg;
+  line-height: 1.7;
+
+  @include mobile {
+    margin-inline: auto;
+    font-size: $text-base;
+  }
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-3;
+  margin-bottom: $space-8;
+
+  @include mobile {
+    justify-content: center;
+    margin-bottom: $space-6;
+  }
+}
+
+.hero__socials {
+  display: flex;
+  gap: $space-3;
+  list-style: none;
+
+  @include mobile {
+    justify-content: center;
+  }
+}
+
+.hero__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--color-neutral-100);
+  transition: background-color $transition-fast, transform $transition-fast, color $transition-fast;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.16);
+    color: $color-text-inverse;
+    transform: translateY(-2px);
+  }
+}
+
+.hero__portrait {
+  position: relative;
+  justify-self: center;
+
+  @include mobile {
+    order: -1;
+  }
+
+  // Soft brand glow behind the portrait.
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -12%;
+    border-radius: 50%;
+    background: radial-gradient(circle, color-mix(in srgb, var(--color-accent-600) 45%, transparent), transparent 65%);
+    filter: blur(20px);
+  }
+}
+
+.hero__ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, var(--color-primary-400), var(--color-accent-500), var(--color-primary-200), var(--color-primary-400));
+  animation: hero-spin 12s linear infinite;
+}
+
+@keyframes hero-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hero__avatar {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border: 4px solid var(--color-neutral-950);
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+
+  @include tablet-down {
+    width: 260px;
+    height: 260px;
+  }
+
+  @include mobile {
+    width: 168px;
+    height: 168px;
+    border-width: 3px;
+  }
+}
